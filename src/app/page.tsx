@@ -1,4 +1,5 @@
 import { CatalogCenter } from "@/components/CatalogCenter";
+import { CatalogDropdowns } from "@/components/CatalogDropdowns";
 import { CatalogNav } from "@/components/CatalogNav";
 import { QuickCart } from "@/components/QuickCart";
 import {
@@ -48,21 +49,29 @@ export default async function CatalogPage({
   }
 
   return (
-    <div className="flex flex-col gap-3 lg:flex-row lg:items-start">
-      <CatalogNav
+    <div>
+      <CatalogDropdowns
         year={year}
         modelId={modelId}
         engineId={engineId}
         categoryId={categoryId}
       />
-      <CatalogCenter
-        year={year}
-        modelId={modelId}
-        engineId={engineId}
-        categoryId={categoryId}
-      />
-      <div className="hidden xl:block">
-        <QuickCart />
+      <div className="flex flex-col gap-3 lg:flex-row lg:items-start">
+        <CatalogNav
+          year={year}
+          modelId={modelId}
+          engineId={engineId}
+          categoryId={categoryId}
+        />
+        <CatalogCenter
+          year={year}
+          modelId={modelId}
+          engineId={engineId}
+          categoryId={categoryId}
+        />
+        <div className="hidden xl:block">
+          <QuickCart />
+        </div>
       </div>
     </div>
   );

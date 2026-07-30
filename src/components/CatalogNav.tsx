@@ -16,6 +16,7 @@ type Props = {
   categoryId: string | null;
 };
 
+/** Left browse list — always shows every option at each reached level. */
 export function CatalogNav({ year, modelId, engineId, categoryId }: Props) {
   const years = getYears();
   const models = year ? getModels(year) : [];
@@ -25,10 +26,10 @@ export function CatalogNav({ year, modelId, engineId, categoryId }: Props) {
   return (
     <aside className="w-full shrink-0 border border-ce-border bg-ce-panel text-sm lg:w-56">
       <div className="border-b border-ce-border bg-ce-navy px-2 py-1.5 text-xs font-bold uppercase tracking-wide text-ce-gold">
-        Catalog
+        All Cadillacs
       </div>
 
-      <Section title="Year">
+      <Section title="Year (every Cadillac)">
         <ul className="space-y-0.5">
           {years.map((y) => (
             <li key={y}>
@@ -45,7 +46,7 @@ export function CatalogNav({ year, modelId, engineId, categoryId }: Props) {
       </Section>
 
       {year && (
-        <Section title="Model">
+        <Section title={`Models — ${year}`}>
           <ul className="space-y-0.5">
             {models.map((m) => (
               <li key={m.id}>
@@ -63,7 +64,7 @@ export function CatalogNav({ year, modelId, engineId, categoryId }: Props) {
       )}
 
       {year && modelId && (
-        <Section title="Engine">
+        <Section title="Engines">
           <ul className="space-y-0.5">
             {engines.map((e) => (
               <li key={e.id}>
@@ -81,7 +82,7 @@ export function CatalogNav({ year, modelId, engineId, categoryId }: Props) {
       )}
 
       {year && modelId && engineId && (
-        <Section title="Category">
+        <Section title="Categories">
           <ul className="space-y-0.5">
             {categories.map((c) => (
               <li key={c.id}>

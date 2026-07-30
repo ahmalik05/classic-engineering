@@ -79,9 +79,9 @@ function YearPicker() {
         Part Catalog — Cadillac 1959–1963
       </h1>
       <p className="mb-3 text-xs text-ce-ink-muted">
-        Select a year in the left navigation (or below) to drill into models,
-        engines, and part categories. Classic Engineering stocks vintage
-        Cadillac parts for these model years only.
+        Use the big dropdowns above (or the list below / left nav) to pick any
+        1959–1963 Cadillac. Reopen a dropdown or click your path to go back and
+        see every option you selected.
       </p>
       <ChooserList
         items={getYears().map((y) => ({
