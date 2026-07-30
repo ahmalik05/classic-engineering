@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --ce-navy: #0b1c2c;
+  --ce-navy-deep: #061018;
+  --ce-gold: #c4a35a;
+  --ce-gold-bright: #d4b86a;
+  --ce-ink: #1a1a1a;
+  --ce-ink-muted: #5a5a5a;
+  --ce-muted: #b8c0c8;
+  --ce-link: #0b4f8a;
+  --ce-border: #c5c9ce;
+  --ce-panel: #f0f2f4;
+  --ce-row: #f7f8f9;
+  --ce-row-hover: #e8eef4;
+  --ce-page: #e6e8eb;
+  --background: var(--ce-page);
+  --foreground: var(--ce-ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ce-navy: var(--ce-navy);
+  --color-ce-navy-deep: var(--ce-navy-deep);
+  --color-ce-gold: var(--ce-gold);
+  --color-ce-gold-bright: var(--ce-gold-bright);
+  --color-ce-ink: var(--ce-ink);
+  --color-ce-ink-muted: var(--ce-ink-muted);
+  --color-ce-muted: var(--ce-muted);
+  --color-ce-link: var(--ce-link);
+  --color-ce-border: var(--ce-border);
+  --color-ce-panel: var(--ce-panel);
+  --color-ce-row: var(--ce-row);
+  --color-ce-row-hover: var(--ce-row-hover);
+  --color-ce-page: var(--ce-page);
+  --font-sans: var(--font-source-sans);
+  --font-display: var(--font-libre-franklin);
+  --font-mono: var(--font-ibm-plex-mono);
+}
+
+body {
+  background: var(--ce-page);
+  color: var(--ce-ink);
+  font-family: var(--font-source-sans), "Segoe UI", sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-libre-franklin), "Segoe UI", sans-serif;
+}
